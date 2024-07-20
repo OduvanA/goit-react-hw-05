@@ -1,60 +1,29 @@
-import { useState, useEffect } from 'react';
 import './App.css'
-import { fetchMovies, fetchTrendingMovies } from '../../../movies-api';
-import MovieList from '../MovieList/MovieList';
-import SearchBar from '../SearchBar/SearchBar';
+import Navigation from '../Navigation/Navigation';
+import HomePage from '../../pages/HomePage/HomePage';
+import MoviesPage from '../../pages/MoviesPage/MoviesPage';
+import MovieDetailsPage from '../../pages/MovieDetailsPage/MovieDetailsPage';
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
+import { Routes, Route } from 'react-router-dom';
 
 
 
 export default function App() {
-  // const [error, setError] = useState(false);
-  const [movieList, setMovieList] = useState([]);
-  const [search, setSearch] = useState('');
-
-
-  const handleSearch = (search) => {
-    setMovieList([]);
-    setSearch(search);
-  }
-
-  useEffect(() => {
-    async function getMovies() {
-      try {
-        const data = await fetchTrendingMovies();
-        setMovieList(data.results);
-      } catch (error) {
-        // setError(true);
-      } 
-    }
-
-    getMovies();
-  }, [])
-
-  useEffect(() => {
-    if (!search) {
-      return;
-    }
-
-    async function getMovies() {
-      try {
-        const data = await fetchMovies(search);
-        setMovieList(data.results);
-      } catch (error) {
-        // setError(true);
-      } 
-    }
-
-    getMovies();
-  }, [search])
 
   return (
     <>
-      <h1>Hello!!!</h1>
-      <SearchBar onSearch={handleSearch} />
-      <MovieList trendingMovies={movieList} />
-      
+      <Navigation/>
+
+      <Routes>
+        <Route path='/' element={<HomePage />}></Route>
+        <Route path='/movies' element={<MoviesPage />}></Route>
+        {/* <Route path='/movies/:movieId' element={<MovieDetailsPage />}>
+          <Route path='/movies/:movieId/cast' element={<MovieCast />}></Route>
+          <Route path='/movies/:movieId/reviews' element={<MovieReviews />}></Route>
+        </Route> */}
+        <Route path='*' element={<NotFoundPage />}></Route>
+      </Routes>
     </>
   )
 }
-
 
