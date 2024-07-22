@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image {
+  display: block;
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.listItem {
+  width: 120px;
+}
+
+.error {
+  color: navy;
+  font-weight: 600;
+}

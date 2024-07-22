@@ -1,0 +1,27 @@
+.error {
+  color: navy;
+  font-weight: 500;
+}
+
+.author {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.review {
+  font-size: 12px;
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.listItem {
+  width: calc((100% - 30px) / 3);
+  box-shadow: 0 1px 0.5px -0.5px rgba(5, 4, 66, 0.6);
+  text-align: left;
+}

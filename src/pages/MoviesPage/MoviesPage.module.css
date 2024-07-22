@@ -1,0 +1,30 @@
+.error {
+  color: navy;
+  font-weight: 600;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.field {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid navy;
+  margin-right: 16px;
+  outline: transparent;
+}
+
+.field:hover,
+.field:focus,
+.field:active {
+  border: 2px solid navy;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgb(172, 192, 247);
+  border-radius: 6px;
+}
+

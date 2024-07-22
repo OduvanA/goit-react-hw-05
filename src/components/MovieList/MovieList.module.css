@@ -1,0 +1,13 @@
+.link {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.link:hover,
+.link:focus {
+  color: navy;
+}
+
+.list {
+  margin-top: 20px;
+}
