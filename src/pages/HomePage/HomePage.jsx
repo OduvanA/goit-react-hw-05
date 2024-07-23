@@ -31,7 +31,7 @@ export default function HomePage() {
       <h1>Trending today</h1>
       {loading && <FadeLoader color="navy" />}
       {movieList.length > 0 && <MovieList movieList={movieList} />}
-      {error && <p className={css.error}>Oops! omething went wrong, please, try again later.</p>}
+      {error && <p className={css.error}>Oops! Something went wrong, please try again later.</p>}
     </>
   );
 }

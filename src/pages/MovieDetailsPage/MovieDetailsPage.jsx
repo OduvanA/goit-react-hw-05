@@ -14,7 +14,7 @@ const buildNavLinkClass = ({ isActive }) => {
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkRef = useRef(location.state ?? "/movies");
+  const backLinkRef = useRef(location.state ?? "/");
 
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -52,7 +52,7 @@ export default function MovieDetailsPage() {
       <div className={css.movieContainer}>
         <div className={css.imageContainer}>
           <img className={css.image}
-            src={"https://image.tmdb.org/t/p/w300" + movie.backdrop_path}
+            src={"https://image.tmdb.org/t/p/w300" + movie.poster_path}
             alt={movie.title}>
           </img>
         </div>
@@ -88,7 +88,7 @@ export default function MovieDetailsPage() {
       <Outlet />
     </>
       )}
-      {error && <p className={css.error}>Oops! omething went wrong, please, try again later.</p>}
+      {error && <p className={css.error}>Oops! Something went wrong, please try again later.</p>}
     </>
    );
 }
