@@ -12,6 +12,7 @@ export default function MovieReviews() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    if (!movieId) return;
     async function getMovieReviews() {
       try {
         setLoading(true);

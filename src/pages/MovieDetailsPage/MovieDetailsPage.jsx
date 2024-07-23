@@ -14,7 +14,7 @@ const buildNavLinkClass = ({ isActive }) => {
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const location = useLocation();
-  const refLocation = useRef(location.state ?? "/movies");
+  const backLinkRef = useRef(location.state ?? "/movies");
 
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -41,7 +41,7 @@ export default function MovieDetailsPage() {
   return (
     <>
       <div className={css.goBackContainer}>
-        <Link className={css.goBackLink} to={refLocation.current}>
+        <Link className={css.goBackLink} to={backLinkRef.current}>
           <FaArrowLeftLong />
           Go back
         </Link>
