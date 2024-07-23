@@ -1,9 +1,13 @@
 import axios from "axios";
 
+// axios.defaults.params = {
+//  api_key: "232e381ebf1a94e2e23bd4bc0f54042c"
+// }
+
   const options = {
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzJlMzgxZWJmMWE5NGUyZTIzYmQ0YmMwZjU0MDQyYyIsIm5iZiI6MTcyMTc0Mzc1MC44NTU4MjUsInN1YiI6IjY2OWZiODU3MDJhOTk2MGU5NjBhNmE5YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9BoO2RZt7WKcMlIQ2KpSc8zkeUX0t9Uoi2P0jqPf0_4'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzJlMzgxZWJmMWE5NGUyZTIzYmQ0YmMwZjU0MDQyYyIsIm5iZiI6MTcyMTc1NDU5MS45MTMyNjIsInN1YiI6IjY2OWZiODU3MDJhOTk2MGU5NjBhNmE5YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7lFcrwemxq3qL9QhnptCcDd7AGK9fwF-Pt4j8rRQWrg'
     }
   };
 
