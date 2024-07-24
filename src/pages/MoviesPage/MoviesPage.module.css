@@ -4,7 +4,8 @@
 }
 
 .form {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  display: flex;
 }
 
 .field {

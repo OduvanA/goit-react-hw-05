@@ -27,11 +27,11 @@ export default function HomePage() {
   }, [])
 
   return (
-    <>
-      <h1>Trending today</h1>
+    <div className={css.container}>
+      <h2>Trending today</h2>
       {loading && <FadeLoader color="navy" />}
       {trendingMovies.length > 0 && <MovieList movieList={trendingMovies} />}
       {error && <p className={css.error}>Oops! Something went wrong, please try again later.</p>}
-    </>
+    </div>
   );
 }
