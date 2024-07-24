@@ -23,6 +23,7 @@ export default function MovieDetailsPage() {
  
   useEffect(() => {
     async function getMovieDitails() {
+      if (!movieId) return;
       try {
         setLoading(true);
         const data = await fetchMovieDetails(movieId);

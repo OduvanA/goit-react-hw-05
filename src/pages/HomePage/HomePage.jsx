@@ -6,7 +6,7 @@ import { FadeLoader } from "react-spinners";
 
 export default function HomePage() {
 
-  const [movieList, setMovieList] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -15,7 +15,7 @@ export default function HomePage() {
       try {
         setLoading(true);
         const data = await fetchTrendingMovies();
-        setMovieList(data.results);
+        setTrendingMovies(data.results);
       } catch (error) {
         setError(true);
       } finally {
@@ -30,7 +30,7 @@ export default function HomePage() {
     <>
       <h1>Trending today</h1>
       {loading && <FadeLoader color="navy" />}
-      {movieList.length > 0 && <MovieList movieList={movieList} />}
+      {trendingMovies.length > 0 && <MovieList movieList={trendingMovies} />}
       {error && <p className={css.error}>Oops! Something went wrong, please try again later.</p>}
     </>
   );

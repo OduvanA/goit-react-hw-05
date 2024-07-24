@@ -44,12 +44,11 @@ export default function MoviesPage() {
 
   return (
     <div>
-      <h1>Movies page</h1>
       <Formik initialValues={{searchBar: ""}} onSubmit={handleSubmit}>
-      <Form> className={css.form}
-        <Field className={css.field} type="text" name="searchBar" />
-        <button className={css.button} type="submit">Search</button>
-      </Form>
+        <Form className={css.form}> 
+          <Field className={css.field} type="text" name="searchBar" />
+          <button className={css.button} type="submit">Search</button>
+        </Form>
       </Formik>
       {loading && <FadeLoader color="navy" />}
       {movieList.length > 0 && !loading && <MovieList movieList={movieList} />}

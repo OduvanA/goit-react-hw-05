@@ -5,7 +5,7 @@ import { lazy, Suspense } from 'react';
 import FadeLoader from "react-spinners/FadeLoader";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
-const MoviesPage = lazy(() => import("../../pages/MovieDetailsPage/MovieDetailsPage"));
+const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() => import("../../pages/MovieDetailsPage/MovieDetailsPage"));
 const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage"));
 const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
